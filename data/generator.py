@@ -1,5 +1,5 @@
-from math import pi, sin
 import cPickle
+from math import pi, sin
 import random
 import sys
 import traceback
