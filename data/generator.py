@@ -6,7 +6,7 @@ import traceback
 
 def main():
     points = []
-    for i in range(1000):
+    for i in range(75):
         x = random.uniform(0, 1)
         y = 0.5 + (0.4 * sin(2.0 * pi * x)) + random.uniform(-0.1, 0.1)
         points.append((x, y))
