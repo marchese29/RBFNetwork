@@ -29,9 +29,12 @@ def get_centroids(dataset, num_clusters):
                 current_closest = cluster_num
         partitioning[current_closest].append(point)
     for partition, points in partitioning.iteritems():
-        centers[partition] = sum([p[0] for p in points]) / len(points)
+        if len(points) > 0:
+            centers[partition] = sum([p[0] for p in points]) / len(points)
+        else:
+            centers[partition] = random.uniform(min_point[0], max_point[0])
 
-    old_partitioning = dict()
+    old_partitioning = { i: [] for i in centers.keys() }
 
     # Keep running until the partitioning does not change.
     while not is_same(partitioning, old_partitioning):
@@ -51,7 +54,10 @@ def get_centroids(dataset, num_clusters):
 
         # Calculate the new centers
         for partition, points in partitioning.iteritems():
-            centers[partition] = sum([p[0] for p in points]) / len(points)
+            if len(points) > 0:
+                centers[partition] = sum([p[0] for p in points]) / len(points)
+            else:
+                centers[partition] = random.uniform(min_point[0], max_point[0])
 
     # Centroid location -> points in partition
     return { centers[num]: points for num, points in partitioning.iteritems() }

@@ -1,0 +1,11 @@
+Variance Calculated for each Gaussian
+Mean Squared Error: 0.0040
+Mean Squared Error: 0.0179
+Mean Squared Error: 0.0116
+Mean Squared Error: 0.0147
+Mean Squared Error: 0.0197
+Mean Squared Error: 0.0056
+Mean Squared Error: 0.0203
+Mean Squared Error: 0.0115
+Mean Squared Error: 0.0109
+Mean Squared Error: 0.0138

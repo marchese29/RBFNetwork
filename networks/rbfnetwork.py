@@ -10,13 +10,13 @@ class RBFNetwork(object):
         self._widths = [n[1] for n in node_props]
         self._bias = random.uniform(-1, 1)
 
-    def _gaussians(value):
+    def _gaussians(self, value):
         return map(lambda m, v: math.exp(-(((m - value)**2) / (2 * v))), self._means, self._widths)
 
     def feed(self, inp):
         return sum(map(lambda x, y: x * y, self._gaussians(inp), self._weights)) + self._bias
 
-    def train(self, inp, des):
+    def train(self, eta, inp, des):
         # Get the result of sending this through
         y_inp = self.feed(inp)
 
@@ -26,4 +26,4 @@ class RBFNetwork(object):
 
         # Update the bias
         delta_b = eta * (des - y_inp)
-        self._bias = self._bias + delta_b
+        self._bias += delta_b
