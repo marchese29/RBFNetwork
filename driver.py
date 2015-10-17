@@ -34,6 +34,10 @@ def plot_function(f):
 def mse(points, network):
     return sum(map(lambda p: (network.feed(p[0]) - p[1])**2, points)) / len(points)
 
+def ground_truth_mse(points):
+    gt = lambda x: 0.5 + (0.4 * math.sin(2.0 * math.pi * x))
+    return sum(map(lambda p: (gt(p[0]) - p[1])**2, points)) / len(points)
+
 def train(network, points, eta):
     for i in range(100):  # 100 epochs
         points = random.sample(points, len(points))  # Randomize the training order.
@@ -91,6 +95,8 @@ def main():
     # Load the data points.
     with open('data/points.pkl', 'rb') as points_file:
         points = cPickle.load(points_file)
+
+    print 'Ground truth MSE: %.4f' % ground_truth_mse(points)
 
     for eta in ETAS:
         for bases in NUM_BASES:

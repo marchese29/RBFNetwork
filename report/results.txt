@@ -1,0 +1,24 @@
+With different variances for each gaussian
+Mean Squared Error: 0.0062
+Mean Squared Error: 0.0135
+Mean Squared Error: 0.0205
+Mean Squared Error: 0.0112
+Mean Squared Error: 0.0134
+Mean Squared Error: 0.0048
+Mean Squared Error: 0.0154
+Mean Squared Error: 0.0132
+Mean Squared Error: 0.0112
+Mean Squared Error: 0.0073
+
+
+With same variances for all gaussians
+Mean Squared Error: 0.0131
+Mean Squared Error: 0.0094
+Mean Squared Error: 0.0137
+Mean Squared Error: 0.0058
+Mean Squared Error: 0.0035
+Mean Squared Error: 0.0076
+Mean Squared Error: 0.0079
+Mean Squared Error: 0.0061
+Mean Squared Error: 0.0044
+Mean Squared Error: 0.0032

@@ -42,6 +42,12 @@ util/kmeans.py
 This is the logic for finding where to place the centers for the gaussian functions that we are
 approximating.  It is implemented using the K-Means algorithm.
 
+Dependencies
+============
+This project has 2 external dependencies.  To install them on stdlinux, run the following command:
+> pip install --user numpy matplotlib
+You must have X-Forwarding enabled to view the graphs.
+
 Execution
 =========
 To re-generate the test data, cd into the data folder and run the following command:
